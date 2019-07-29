@@ -37,7 +37,7 @@ export PATH=$PATH:$CODER_BIN_DIR
 bbl -d plan --iaas aws
 
 cat << EOF > $BBL_STATE_DIRECTORY/vars/zones.tfvars
-availability_zones=["$BBL_AWS_REGIONa", "$BBL_AWS_REGIONb", "$BBL_AWS_REGIONc"]
+availability_zones=["${BBL_AWS_REGION}a", "${BBL_AWS_REGION}b", "${BBL_AWS_REGION}c"]
 EOF
 
 bbl -d up --iaas aws
