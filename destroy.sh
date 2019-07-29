@@ -2,6 +2,10 @@
 
 set -e
 
+export PATH=$PATH:$CODER_BIN_DIR
+
+echo $PATH
+
 source /mnt/coder/bashrc.d/bosh.bashrc
 
-/mnt/coder/bin/bbl -d destroy --no-confirm
+bbl -d destroy --no-confirm
