@@ -27,3 +27,5 @@ chmod +x /mnt/coder/bashrc.d/bosh.bashrc
 export PATH=$PATH:$CODER_BIN_DIR
 
 bbl -s $BBL_STATE plan --iaas aws
+
+bbl -s $BBL_STATE up --iaas aws
