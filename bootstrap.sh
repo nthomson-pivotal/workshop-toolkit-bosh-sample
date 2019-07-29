@@ -16,7 +16,9 @@ sudo apt update && sudo apt install -y build-essential zlibc zlib1g-dev ruby rub
 wget -q -O $CODER_BIN_DIR/bbl https://github.com/cloudfoundry/bosh-bootloader/releases/download/v8.1.1/bbl-v8.1.1_linux_x86-64
 chmod +x $CODER_BIN_DIR/bbl
 
-export BBL_ENV_NAME=$(echo "$WORKSHOP_ID" | md5sum  | awk '{print $1}' | cut -c1-8)
+export BBL_ENV_NAME=$(head /dev/urandom | tr -dc a-z | head -c 13 ; echo '')
+
+echo "Generated env name ${BBL_ENV_NAME}"
 
 cat << EOF > /mnt/coder/bashrc.d/bosh.bashrc
 export BBL_ENV_NAME=$BBL_ENV_NAME
