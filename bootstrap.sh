@@ -19,7 +19,10 @@ chmod +x $CODER_BIN_DIR/bbl
 cat << EOF > /mnt/coder/bashrc.d/bosh.bashrc
 export BBL_STATE_DIRECTORY=$BBL_STATE
 export BBL_IAAS=aws
-eval "$(bbl print-env)"
+
+if [ -f "$BBL_STATE/bbl-state.json" ]; then
+  eval "\$(bbl print-env)"
+fi
 EOF
 
 chmod +x /mnt/coder/bashrc.d/bosh.bashrc
