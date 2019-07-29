@@ -2,7 +2,7 @@
 
 set -e
 
-BBL_STATE_DIRECTORY=/mnt/coder/bbl-state
+export BBL_STATE_DIRECTORY=/mnt/coder/bbl-state
 
 mkdir -p $BBL_STATE_DIRECTORY
 
