@@ -4,6 +4,8 @@ set -e
 
 BBL_STATE=/mnt/coder/bbl-state
 
+mkdir -p $BBL_STATE
+
 wget -q -O $CODER_BIN_DIR/bosh https://github.com/cloudfoundry/bosh-cli/releases/download/v5.5.1/bosh-cli-5.5.1-linux-amd64
 chmod +x $CODER_BIN_DIR/bosh
 
