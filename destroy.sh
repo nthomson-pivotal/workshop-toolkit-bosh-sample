@@ -2,7 +2,7 @@
 
 set -e
 
-export PATH=$PATH:$CODER_BIN_DIR
+export PATH=$PATH:/mnt/coder/bin
 
 echo $PATH
 
