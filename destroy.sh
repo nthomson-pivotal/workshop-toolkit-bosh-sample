@@ -2,6 +2,8 @@
 
 set -e
 
+env
+
 export PATH=$PATH:/mnt/coder/bin
 
 echo $PATH
